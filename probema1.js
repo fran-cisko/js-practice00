@@ -6,7 +6,8 @@
 pedro  1.7
 cofla 3
 */
-/*dineroPedro= Number(prompt('Cuanto dinero tenés Pedro?'));
+/*
+dineroPedro= Number(prompt('Cuanto dinero tenés Pedro?'));
 
 dineroRoberto= Number(prompt('Cuanto dinero tenés Roberto?'));
 
