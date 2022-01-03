@@ -1,4 +1,4 @@
-document.write('<br><br>secuencia de números hecha con while');
+document.write('<br><br>Secuencia de números hecha con while<br>');
 
 number= -3;
 

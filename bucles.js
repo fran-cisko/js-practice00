@@ -1,4 +1,4 @@
-document.write('secuencia de números hecha con do while');
+document.write('<br><h2>Secuencia de números hecha con do while</h2>');
 let number = -5;
 
 do{
