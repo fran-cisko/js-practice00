@@ -13,3 +13,4 @@ document.write('<h2>La siguiente secuencia está hecha con for y la variable <st
 for(let i=0; i<6; ++i){
     document.write(i+'<br>');
 }
+

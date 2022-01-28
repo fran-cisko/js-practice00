@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & Javascript</title>
+</head>
+<body>
+    <h2>Práctica con botones</h2>
+<button  onclick='saludo("fulano", "perez" )' > saludo a Fulano</button>
+<button  onclick='saludo("Mengano", "Mendez" )' > saludo a Mengano</button> <!--no se usa onclick-->
+    <div id='divChangeContent'>
+Texto a cambiar
+    </div>
+    
+    <button id=btn> Despedida</button>
+    <div id="divGoodBy">texto de despedida</div>
+  
+  <script>
+function saludo(nombre, apellido) {
+    alert(`hola ${nombre} ${apellido}.`)
+    let message = document.getElementById('divChangeContent');
+message.innerText= `que hacé tanto tiempo ${nombre}?`;
+};
+
+let btn = document.getElementById('btn');
+btn.addEventListener("click", goodBy)
+
+function goodBy(){
+    let divGoodBy = document.getElementById('divGoodBy');
+    divGoodBy.innerText = 'Me despido, me tengo que ir';
+
+}
+
+
+    </script>
+
+</body>
+</html>

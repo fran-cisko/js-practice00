@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    
+    <ol>
+        <li>Hay 3 materias que se cursan. Crear una función que al pasarle como parametro la materia nos devuelva:
+            <ul>
+                <li>Profesor asignado</li>
+           
+                <li>El nombre de todos los alumnos</li>
+
+                <script>
+                    const obtenerInfoMaterias = (materia)=>{
+                        materias = {
+                            fisica : ["Prof.roberto","roberta","Claudio", "Claudia"],
+                            programacion: ["Prof.pepa","juanito", "robotín","roberto","roberta","Claudio", "Claudia"],
+                            logica : ["Prof. robotín","roberto","juanito","roberta","Claudio", "Claudia"]
+                        }
+                        if(materia !== undefined){
+                            return[materias[materia], materia,materias];
+                        }else{
+                            return materias;//iría false pero lo cambié para resolver el punto 2 de cantidad e alumnos.
+                        }
+                    }
+
+                    const mostrarInfoMaterias = (materia)=>{
+                        let infoMaterias = obtenerInfoMaterias(materia);
+                        if (infoMaterias !== false){
+                            let profes = infoMaterias[0][0];
+                            let estudiantes = infoMaterias[0];
+                            estudiantes.shift();  
+                            document.write(`Los estudiantes presentes en <b>${infoMaterias[1]} </b>son: <br>${estudiantes} <br>
+                            con ${profes}. <br>`)
+                        }
+                
+                    }
+                    mostrarInfoMaterias("programacion");
+                 
+                </script>
+            </ul>
+        </li>
+        <li>Crear una función que nos diga en cuantas clases está Juanito.</li>
+        <li>Nombrar las clases con sus respectivos profesores en las que está Juanitos</li>
+            <script>
+                  //Puntos 2 y 3.
+                  const ClasesPorEstudiante = (estudiante)=>{
+                    let infoMaterias = obtenerInfoMaterias();
+                    let cantidadClases = 0;
+                    let materias = [];
+                    for (materia in infoMaterias){
+                        if(infoMaterias[materia].includes(estudiante)){
+                            cantidadClases++;
+                            materias.push(" " + materia);
+
+                        }
+                    }
+                    return `El estudiante ${estudiante} asiste a ${cantidadClases} clases: ${materias}`
+                }
+                document.write(ClasesPorEstudiante("roberto"));
+
+            </script>
+
+    </ol> 
+</body>
+</html>
